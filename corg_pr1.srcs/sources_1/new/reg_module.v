@@ -1,10 +1,10 @@
 module reg_module(I, Clock, OutASel, OutBSel, FunSel, RegSel, OutA, OutB);
-    input wire Clock;
-    input wire [7:0] I;
-    input wire [1:0] FunSel;
-    input wire [3:0] RegSel;
-    input wire [1:0] OutASel;
-    input wire [1:0] OutBSel;
+    input Clock;
+    input [7:0] I;
+    input [1:0] FunSel;
+    input [3:0] RegSel;
+    input [1:0] OutASel;
+    input [1:0] OutBSel;
     wire [7:0] Reg1;
     wire [7:0] Reg2;
     wire [7:0] Reg3;
