@@ -1,8 +1,8 @@
 module reg_8bit(
-    input wire [7:0] I,
-    input wire Clock,
-    input wire E,
-    input wire [1:0] FunSel,
+    input [7:0] I,
+    input Clock,
+    input E,
+    input [1:0] FunSel,
     output reg[7:0] Q
     );
 

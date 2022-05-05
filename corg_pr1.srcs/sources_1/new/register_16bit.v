@@ -1,8 +1,8 @@
 module reg_16bit(
-    input wire [15:0] I,
-    input wire Clock,
-    input wire E,
-    input wire [1:0] FunSel,
+    input [15:0] I,
+    input Clock,
+    input E,
+    input [1:0] FunSel,
     output reg[15:0] Q
     );
 

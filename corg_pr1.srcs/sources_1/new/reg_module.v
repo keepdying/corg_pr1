@@ -1,16 +1,18 @@
-module reg_module(I, Clock, OutASel, OutBSel, FunSel, RegSel, OutA, OutB);
-    input Clock;
-    input [7:0] I;
-    input [1:0] FunSel;
-    input [3:0] RegSel;
-    input [1:0] OutASel;
-    input [1:0] OutBSel;
+module reg_module(
+    input [7:0] I,
+    input Clock,
+    input [1:0] FunSel,
+    input [3:0] RegSel,
+    input [1:0] OutASel,
+    input [1:0] OutBSel,
+    output reg [7:0] OutA,
+    output reg [7:0] OutB
+    );
+    
     wire [7:0] Reg1;
     wire [7:0] Reg2;
     wire [7:0] Reg3;
     wire [7:0] Reg4;
-    output reg [7:0] OutA;
-    output reg [7:0] OutB;
     
     reg_8bit reg1(.E(!RegSel[3]) , .Clock(Clock), .FunSel(FunSel), .I(I), .Q(Reg1));
     reg_8bit reg2(.E(!RegSel[2]) , .Clock(Clock), .FunSel(FunSel), .I(I), .Q(Reg2));
