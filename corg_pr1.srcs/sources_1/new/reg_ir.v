@@ -14,9 +14,9 @@ module reg_ir(
     always @(*)
     begin
         if(lh)
-            IR[15:8] <= I;
-        else
             IR[7:0] <= I;
+        else
+            IR[15:8] <= I;
     end
 endmodule
 

@@ -1,0 +1,243 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Fri May  6 14:18:23 2022
+# Process ID: 18856
+# Current directory: C:/Users/Fatih/verilog/corg_pr1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19248 C:\Users\Fatih\verilog\corg_pr1\corg_pr1.xpr
+# Log file: C:/Users/Fatih/verilog/corg_pr1/vivado.log
+# Journal file: C:/Users/Fatih/verilog/corg_pr1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Fatih/verilog/corg_pr1/corg_pr1.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/ceza4/corg_pr1' since last save.
+CRITICAL WARNING: [Project 1-311] Could not find the file 'C:/Users/Fatih/verilog/corg_pr1/corg_pr1.srcs/sim_1/new/reg_module_test.v', nor could it be found using path 'C:/Users/ceza4/corg_pr1/corg_pr1.srcs/sim_1/new/reg_module_test.v'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.4/data/ip'.
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:06 . Memory (MB): peak = 731.699 ; gain = 25.629
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+set_property source_mgmt_mode DisplayOnly [current_project]
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+import_files -fileset sim_1 -norecurse {C:/Users/Fatih/Desktop/register_16bit_test.v C:/Users/Fatih/Desktop/reg_module_test.v C:/Users/Fatih/Desktop/register_8bit_test.v}
+export_ip_user_files -of_objects  [get_files C:/Users/Fatih/verilog/corg_pr1/corg_pr1.srcs/sim_1/new/reg_module_test.v] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 C:/Users/Fatih/verilog/corg_pr1/corg_pr1.srcs/sim_1/new/reg_module_test.v
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Fatih/verilog/corg_pr1/corg_pr1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'reg_module_test' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Fatih/verilog/corg_pr1/corg_pr1.sim/sim_1/behav/xsim/RAM.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/Fatih/verilog/corg_pr1/corg_pr1.sim/sim_1/behav/xsim/TestBench.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Fatih/verilog/corg_pr1/corg_pr1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj reg_module_test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Fatih/verilog/corg_pr1/corg_pr1.srcs/sources_1/new/register_16bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg_16bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Fatih/verilog/corg_pr1/corg_pr1.srcs/sources_1/new/reg_ir.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg_ir
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Fatih/verilog/corg_pr1/corg_pr1.srcs/sources_1/new/register_8bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg_8bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Fatih/verilog/corg_pr1/corg_pr1.srcs/sources_1/new/reg_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Fatih/verilog/corg_pr1/corg_pr1.srcs/sources_1/imports/CorgProject1/Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Fatih/verilog/corg_pr1/corg_pr1.srcs/sources_1/new/arf_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module arf_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Fatih/verilog/corg_pr1/corg_pr1.srcs/sim_1/imports/CorgProject1/TestBench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Project1Test
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Fatih/verilog/corg_pr1/corg_pr1.srcs/sim_1/imports/Desktop/register_16bit_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_16bit_test
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Fatih/verilog/corg_pr1/corg_pr1.srcs/sim_1/imports/Desktop/reg_module_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg_module_test
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Fatih/verilog/corg_pr1/corg_pr1.srcs/sim_1/imports/Desktop/register_8bit_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_8bit_test
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Fatih/verilog/corg_pr1/corg_pr1.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Fatih/verilog/corg_pr1/corg_pr1.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 93b272958a1c40c6b9cb4f13c8c61961 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot reg_module_test_behav xil_defaultlib.reg_module_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/Fatih/verilog/corg_pr1/corg_pr1.srcs/sources_1/new/reg_module.v" Line 1. Module reg_module doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Fatih/verilog/corg_pr1/corg_pr1.srcs/sources_1/new/register_8bit.v" Line 1. Module reg_8bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Fatih/verilog/corg_pr1/corg_pr1.srcs/sources_1/new/register_8bit.v" Line 1. Module reg_8bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Fatih/verilog/corg_pr1/corg_pr1.srcs/sources_1/new/register_8bit.v" Line 1. Module reg_8bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Fatih/verilog/corg_pr1/corg_pr1.srcs/sources_1/new/register_8bit.v" Line 1. Module reg_8bit doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.reg_8bit
+Compiling module xil_defaultlib.reg_module
+Compiling module xil_defaultlib.reg_module_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot reg_module_test_behav
+
+****** Webtalk v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/Fatih/verilog/corg_pr1/corg_pr1.sim/sim_1/behav/xsim/xsim.dir/reg_module_test_behav/webtalk/xsim_webtalk.tcl -notrace
+webtalk_transmit: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 51.289 ; gain = 0.965
+INFO: [Common 17-206] Exiting Webtalk at Fri May  6 14:20:35 2022...
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 773.648 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '9' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Fatih/verilog/corg_pr1/corg_pr1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "reg_module_test_behav -key {Behavioral:sim_1:Functional:reg_module_test} -tclbatch {reg_module_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+source reg_module_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'reg_module_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 792.379 ; gain = 18.730
+set_property top register_16bit_test [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Fatih/verilog/corg_pr1/corg_pr1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'register_16bit_test' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Fatih/verilog/corg_pr1/corg_pr1.sim/sim_1/behav/xsim/RAM.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/Fatih/verilog/corg_pr1/corg_pr1.sim/sim_1/behav/xsim/TestBench.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Fatih/verilog/corg_pr1/corg_pr1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj register_16bit_test_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Fatih/verilog/corg_pr1/corg_pr1.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 93b272958a1c40c6b9cb4f13c8c61961 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot register_16bit_test_behav xil_defaultlib.register_16bit_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/Fatih/verilog/corg_pr1/corg_pr1.srcs/sources_1/new/register_16bit.v" Line 1. Module reg_16bit doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.reg_16bit
+Compiling module xil_defaultlib.register_16bit_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot register_16bit_test_behav
+
+****** Webtalk v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/Fatih/verilog/corg_pr1/corg_pr1.sim/sim_1/behav/xsim/xsim.dir/register_16bit_test_behav/webtalk/xsim_webtalk.tcl -notrace
+webtalk_transmit: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 51.160 ; gain = 1.145
+INFO: [Common 17-206] Exiting Webtalk at Fri May  6 14:21:08 2022...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:11 . Memory (MB): peak = 792.379 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '11' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Fatih/verilog/corg_pr1/corg_pr1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "register_16bit_test_behav -key {Behavioral:sim_1:Functional:register_16bit_test} -tclbatch {register_16bit_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+source register_16bit_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'register_16bit_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:15 . Memory (MB): peak = 798.777 ; gain = 6.398
+export_ip_user_files -of_objects  [get_files C:/Users/Fatih/verilog/corg_pr1/corg_pr1.srcs/sim_1/imports/Desktop/register_16bit_test.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/Fatih/verilog/corg_pr1/corg_pr1.srcs/sim_1/imports/Desktop/reg_module_test.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/Fatih/verilog/corg_pr1/corg_pr1.srcs/sim_1/imports/Desktop/register_8bit_test.v] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 {C:/Users/Fatih/verilog/corg_pr1/corg_pr1.srcs/sim_1/imports/Desktop/register_16bit_test.v C:/Users/Fatih/verilog/corg_pr1/corg_pr1.srcs/sim_1/imports/Desktop/reg_module_test.v C:/Users/Fatih/verilog/corg_pr1/corg_pr1.srcs/sim_1/imports/Desktop/register_8bit_test.v}
+file delete -force C:/Users/Fatih/verilog/corg_pr1/corg_pr1.srcs/sim_1/imports/Desktop/register_16bit_test.v C:/Users/Fatih/verilog/corg_pr1/corg_pr1.srcs/sim_1/imports/Desktop/reg_module_test.v C:/Users/Fatih/verilog/corg_pr1/corg_pr1.srcs/sim_1/imports/Desktop/register_8bit_test.v
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+import_files -fileset sim_1 -norecurse {C:/Users/Fatih/Desktop/register_16bit_test.v C:/Users/Fatih/Desktop/reg_module_test.v C:/Users/Fatih/Desktop/register_8bit_test.v}
+set_property top reg_module_test [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+current_sim simulation_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 807.699 ; gain = 0.000
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Fatih/verilog/corg_pr1/corg_pr1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'reg_module_test' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Fatih/verilog/corg_pr1/corg_pr1.sim/sim_1/behav/xsim/RAM.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/Fatih/verilog/corg_pr1/corg_pr1.sim/sim_1/behav/xsim/TestBench.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Fatih/verilog/corg_pr1/corg_pr1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj reg_module_test_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Fatih/verilog/corg_pr1/corg_pr1.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 93b272958a1c40c6b9cb4f13c8c61961 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot reg_module_test_behav xil_defaultlib.reg_module_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Fatih/verilog/corg_pr1/corg_pr1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "reg_module_test_behav -key {Behavioral:sim_1:Functional:reg_module_test} -tclbatch {reg_module_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+source reg_module_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'reg_module_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 808.508 ; gain = 0.809
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 810.789 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri May  6 14:30:43 2022...

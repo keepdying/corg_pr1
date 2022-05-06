@@ -33,8 +33,10 @@ module reg_module_test();
     reg_module uut(I, Clock, FunSel, RegSel, OutASel, OutBSel, OutA, OutB);
     
     initial begin
-        Clock=0; I=8'h17; FunSel=2'b10; RegSel=4'b0000; OutASel=2'b00; OutBSel=2'b10; #250;
+        Clock=0; I=8'h17; FunSel=2'b10; RegSel=4'b0000; OutASel=2'b00; OutBSel=2'b01; #250;
         I=8'h17; FunSel=2'b01; RegSel=4'b1100; OutASel=2'b10; OutBSel=2'b11; #250;
+        I=8'h17; FunSel=2'b11; RegSel=4'b0001; OutASel=2'b00; OutBSel=2'b01; #250;
+        I=8'h17; FunSel=2'b01; RegSel=4'b0111; OutASel=2'b01; OutBSel=2'b11; #250;
     end
     
     always begin
