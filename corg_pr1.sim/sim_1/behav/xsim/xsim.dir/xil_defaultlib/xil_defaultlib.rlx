@@ -1,0 +1,15 @@
+0.6
+2017.4
+Dec 15 2017
+21:07:18
+C:/Users/Fatih/verilog/corg_pr1/corg_pr1.sim/sim_1/behav/xsim/glbl.v,1513215259,verilog,,,,glbl,,,,,,,,
+C:/Users/Fatih/verilog/corg_pr1/corg_pr1.srcs/sim_1/imports/CorgProject1/TestBench.v,1651835898,verilog,,C:/Users/Fatih/verilog/corg_pr1/corg_pr1.srcs/sim_1/imports/Desktop/register_16bit_test.v,,Project1Test,,,,,,,,
+C:/Users/Fatih/verilog/corg_pr1/corg_pr1.srcs/sim_1/imports/Desktop/reg_module_test.v,1651832801,verilog,,C:/Users/Fatih/verilog/corg_pr1/corg_pr1.srcs/sim_1/imports/Desktop/register_8bit_test.v,,reg_module_test,,,,,,,,
+C:/Users/Fatih/verilog/corg_pr1/corg_pr1.srcs/sim_1/imports/Desktop/register_16bit_test.v,1651831749,verilog,,C:/Users/Fatih/verilog/corg_pr1/corg_pr1.srcs/sim_1/imports/Desktop/reg_module_test.v,,register_16bit_test,,,,,,,,
+C:/Users/Fatih/verilog/corg_pr1/corg_pr1.srcs/sim_1/imports/Desktop/register_8bit_test.v,1651831607,verilog,,,,register_8bit_test,,,,,,,,
+C:/Users/Fatih/verilog/corg_pr1/corg_pr1.srcs/sources_1/imports/CorgProject1/Memory.v,1651835898,verilog,,C:/Users/Fatih/verilog/corg_pr1/corg_pr1.srcs/sources_1/new/arf_module.v,,Memory,,,,,,,,
+C:/Users/Fatih/verilog/corg_pr1/corg_pr1.srcs/sources_1/new/arf_module.v,1651835898,verilog,,C:/Users/Fatih/verilog/corg_pr1/corg_pr1.srcs/sim_1/imports/CorgProject1/TestBench.v,,arf_module,,,,,,,,
+C:/Users/Fatih/verilog/corg_pr1/corg_pr1.srcs/sources_1/new/reg_ir.v,1651835898,verilog,,C:/Users/Fatih/verilog/corg_pr1/corg_pr1.srcs/sources_1/new/register_8bit.v,,reg_ir,,,,,,,,
+C:/Users/Fatih/verilog/corg_pr1/corg_pr1.srcs/sources_1/new/reg_module.v,1651835898,verilog,,C:/Users/Fatih/verilog/corg_pr1/corg_pr1.srcs/sources_1/imports/CorgProject1/Memory.v,,reg_module,,,,,,,,
+C:/Users/Fatih/verilog/corg_pr1/corg_pr1.srcs/sources_1/new/register_16bit.v,1651835898,verilog,,C:/Users/Fatih/verilog/corg_pr1/corg_pr1.srcs/sources_1/new/reg_ir.v,,reg_16bit,,,,,,,,
+C:/Users/Fatih/verilog/corg_pr1/corg_pr1.srcs/sources_1/new/register_8bit.v,1651835898,verilog,,C:/Users/Fatih/verilog/corg_pr1/corg_pr1.srcs/sources_1/new/reg_module.v,,reg_8bit,,,,,,,,
