@@ -1,6 +1,7 @@
 module shift_module(
     input wire [7:0] I,
     input wire [3:0] FunSel,
+    input wire Cin,
     output reg [7:0] Q,
     output reg Cout
     );
@@ -27,12 +28,12 @@ module shift_module(
             end
             
             4'b1110: begin
-            Q <= {I[6:0], I[7]};
+            Q <= {I[6:0], Cin};
             Cout <= I[7];
             end
             
             4'b1111: begin
-            Q <= {I[0], I[7:1]};
+            Q <= {Cin, I[7:1]};
             Cout <= I[0];
             end
             
