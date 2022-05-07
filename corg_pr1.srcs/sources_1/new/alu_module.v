@@ -3,26 +3,21 @@ module alu_module(
     input wire [7:0] A,
     input wire [7:0] B,
     input wire Cin,
-    input wire clk,
-//    output wire [7:0] Out_ALU,
-//    output wire [3:0] Out_FLAG
     output reg [7:0] OutALU,
-    output reg [3:0] OutFLAG
+    output wire [3:0] OutFLAG
     );
     
-//    reg [7:0] OutALU;
-//    reg [3:0] OutFLAG;
     wire [7:0] shift_temp;
-    wire neg, zero, carry, overflow, shift_carry;
-    shift_module shifter(.I(A), .FunSel(FunSel), .Cin(Cin), .Q(shift_temp), .Cout(shift_carry));
+    wire [8:0] sum, sub;
+    wire neg, zero, carry, overflow, shift_carry, sum_carry;
 
-    wire [8:0] sum;
-    wire [8:0] sub;
-    assign carry = (FunSel == 4'b0101) ? Cin : 0;
-    assign sum = A + B + carry;
+    
+    shift_module shifter(.I(A), .FunSel(FunSel), .Cin(Cin), .Q(shift_temp), .Cout(shift_carry));
+        
+    assign OutFLAG = {zero, carry, neg, overflow};
+    assign sum_carry = (FunSel == 4'b0101) ? Cin : 0;
+    assign sum = A + B + sum_carry;
     assign sub = A - B;
-//    assign Out_FLAG = OutFLAG;
-//    assign Out_ALU = OutALU;
     
     always @(*)
         begin
@@ -41,11 +36,6 @@ module alu_module(
             endcase
         end
      
-    always @(posedge clk)
-        begin
-            OutFLAG <= {zero, carry, neg, overflow};
-        end
-
     assign zero     = (OutALU == 8'b0);
     assign carry    = ((FunSel == 4'b010?) & sum[8]) | ((FunSel == 4'b0110) & sub[8]) | ((FunSel == 4'b1?1?) & shift_carry);
     assign neg      = (FunSel == 4'b1101) ? neg : OutALU[7];

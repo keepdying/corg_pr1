@@ -9,6 +9,7 @@ Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.shift_module
 Compiling module xil_defaultlib.alu_module
+Compiling module xil_defaultlib.reg_flag
 Compiling module xil_defaultlib.alu_module_test
 Compiling module xil_defaultlib.glbl
 Built simulation snapshot alu_module_test_behav
