@@ -4,7 +4,7 @@ module reg_flag(
     output reg [3:0] OutFLAG
     );
     
-    always @(posedge clk)
+    always @(negedge clk)
         begin
             OutFLAG <= InFLAG;
         end

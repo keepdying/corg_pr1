@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="2552000000fs"></ZoomStartTime>
-      <ZoomEndTime time="4064000001fs"></ZoomEndTime>
-      <Cursor1Time time="3164000000fs"></Cursor1Time>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="4000000001fs"></ZoomEndTime>
+      <Cursor1Time time="1500000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="175"></NameColumnWidth>
-      <ValueColumnWidth column_width="88"></ValueColumnWidth>
+      <ValueColumnWidth column_width="64"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="8" />
+   <WVObjectSize size="10" />
    <wvobject fp_name="/alu_module_test/FunSel" type="array">
       <obj_property name="ElementShortName">FunSel[3:0]</obj_property>
       <obj_property name="ObjectShortName">FunSel[3:0]</obj_property>
@@ -28,7 +28,7 @@
    <wvobject fp_name="/alu_module_test/A" type="array">
       <obj_property name="ElementShortName">A[7:0]</obj_property>
       <obj_property name="ObjectShortName">A[7:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/alu_module_test/B" type="array">
       <obj_property name="ElementShortName">B[7:0]</obj_property>
@@ -46,7 +46,7 @@
    <wvobject fp_name="/alu_module_test/OutALU" type="array">
       <obj_property name="ElementShortName">OutALU[7:0]</obj_property>
       <obj_property name="ObjectShortName">OutALU[7:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/alu_module_test/OutFLAG" type="array">
       <obj_property name="ElementShortName">OutFLAG[3:0]</obj_property>
@@ -55,6 +55,13 @@
    <wvobject fp_name="/alu_module_test/reg_flag_out" type="array">
       <obj_property name="ElementShortName">reg_flag_out[3:0]</obj_property>
       <obj_property name="ObjectShortName">reg_flag_out[3:0]</obj_property>
-      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/alu_module_test/uut/sum" type="array">
+      <obj_property name="ElementShortName">sum[8:0]</obj_property>
+      <obj_property name="ObjectShortName">sum[8:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/alu_module_test/uut/sub" type="array">
+      <obj_property name="ElementShortName">sub[8:0]</obj_property>
+      <obj_property name="ObjectShortName">sub[8:0]</obj_property>
    </wvobject>
 </wave_config>

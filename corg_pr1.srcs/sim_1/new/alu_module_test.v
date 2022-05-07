@@ -15,8 +15,7 @@ module alu_module_test();
     assign Cin = reg_flag_out[2];
     
     initial begin
-        clk=0; #250; 
-        A=8'd0; B=8'd1; FunSel=4'b0000; #250; // A ZERO FLAG
+        clk=0;A=8'd0; B=8'd1; FunSel=4'b0000; #250; // A ZERO FLAG
         A=8'd1; B=8'd0; FunSel=4'b0001; #250; // B 
         A=8'd2; B=8'd1; FunSel=4'b0010; #250; // ~A
         A=8'd1; B=8'd0; FunSel=4'b0011; #250; // ~B

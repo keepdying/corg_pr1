@@ -37,8 +37,8 @@ module alu_module(
         end
      
     assign zero     = (OutALU == 8'b0);
-    assign carry    = ((FunSel == 4'b010?) & sum[8]) | ((FunSel == 4'b0110) & sub[8]) | ((FunSel == 4'b101?) & shift_carry) | ((FunSel == 4'b111?) & shift_carry);
+    assign carry    = ((FunSel == 4'b0100) && sum[8]) || ((FunSel == 4'b0101) && sum[8])  || ((FunSel == 4'b0110) && sub[8]) || ((FunSel == 4'b1010) && shift_carry) || ((FunSel == 4'b1010) && shift_carry) || ((FunSel == 4'b1110) && shift_carry) || ((FunSel == 4'b1111) && shift_carry);
     assign neg      = (FunSel == 4'b1101) ? neg : OutALU[7];
-    assign overflow = ((FunSel == 4'b11?0) & (A[7] ^ A[6])) | ((FunSel == 4'b1100) & (A[7] ^ A[6])) | ((FunSel == 4'b1111) & (A[7] ^ Cin)) | ((FunSel == 4'b010?) & sum[7]) | ((FunSel == 4'b0110) & sub[7]);
+    assign overflow = ((FunSel == 4'b1100) && (A[7] ^ A[6])) || ((FunSel == 4'b1110) && (A[7] ^ A[6])) || ((FunSel == 4'b1100) && (A[7] ^ A[6])) || ((FunSel == 4'b1111) && (A[7] ^ Cin)) || ((FunSel == 4'b0100) && sum[7]) || ((FunSel == 4'b0101) && sum[7]) || ((FunSel == 4'b0110) && sub[7]);
 
 endmodule
