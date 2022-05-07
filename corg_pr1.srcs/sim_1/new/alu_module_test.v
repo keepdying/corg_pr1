@@ -11,6 +11,7 @@ module alu_module_test();
     
     alu_module uut(FunSel, A, B, Cin, OutALU, OutFLAG);
     reg_flag reg_flag(OutFLAG, clk, reg_flag_out);
+    
     assign Cin = reg_flag_out[2];
     
     initial begin
@@ -35,6 +36,7 @@ module alu_module_test();
     end
     
     always begin
+        
         clk <= ~clk; #125;
 //        clk <= ~clk; #125;
     end
