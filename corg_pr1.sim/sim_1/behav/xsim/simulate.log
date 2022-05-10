@@ -11,7 +11,7 @@ MuxASel: 2, MuxBSel: 1, MuxCSel: 1
 
 Ouput Values:
 Register File: AOut:   x, BOut:   x
-ALUOut:   x, ALUOutFlag:  X, ALUOutFlags: Z:x, C:0, N:x, O:0,
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
 Address Register File: COut:   x, DOut (Address):   x
 Memory Out:   z
 Instruction Register: IROut:     x
@@ -27,7 +27,7 @@ MuxASel: 1, MuxBSel: 0, MuxCSel: 0
 
 Ouput Values:
 Register File: AOut:   0, BOut:   0
-ALUOut:   0, ALUOutFlag:  8, ALUOutFlags: Z:1, C:0, N:0, O:0,
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
 Address Register File: COut:   0, DOut (Address):   0
 Memory Out:   0
 Instruction Register: IROut:     0
@@ -43,7 +43,7 @@ MuxASel: 1, MuxBSel: 0, MuxCSel: 0
 
 Ouput Values:
 Register File: AOut:   1, BOut:   0
-ALUOut:   0, ALUOutFlag:  8, ALUOutFlags: Z:1, C:0, N:0, O:0,
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
 Address Register File: COut:   0, DOut (Address):   0
 Memory Out:   0
 Instruction Register: IROut:     0

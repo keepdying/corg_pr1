@@ -6,7 +6,7 @@ module reg_flag(
     
     always @(negedge Clock)
         begin
-            OutFLAG <= InFLAG;
+             OutFLAG = InFLAG;
         end
 
 endmodule
