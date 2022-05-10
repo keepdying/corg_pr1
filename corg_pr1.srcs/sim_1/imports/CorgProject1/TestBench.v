@@ -49,7 +49,7 @@ module Project1Test();
     .RF_FunSel(RF_FunSel),
     .RF_RegSel(RF_RegSel),
     .ALU_FunSel(ALU_FunSel),
-    .ARF_OutCSel(ARF_OutCSel), 
+    .ARF_COut(ARF_OutCSel), 
     .ARF_OutDSel(ARF_OutDSel), 
     .ARF_FunSel(ARF_FunSel),
     .ARF_RegSel(ARF_RegSel),

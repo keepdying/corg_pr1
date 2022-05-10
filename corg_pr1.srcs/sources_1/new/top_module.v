@@ -6,7 +6,7 @@ module ALUSystem(
     input wire[1:0] RF_FunSel,
     input wire[3:0] RF_RegSel,
     input wire[3:0] ALU_FunSel,
-    input wire[1:0] ARF_OutCSel, 
+    input wire[1:0] ARF_COut, //ARF_OutCSel 
     input wire[1:0] ARF_OutDSel, 
     input wire[1:0] ARF_FunSel,
     input wire[2:0] ARF_RegSel,
@@ -21,83 +21,83 @@ module ALUSystem(
     input wire      Clock
     );
     
-    wire [15:0] IRout;
-    wire [7:0]  OutALU, OutA, OutB, OutC, OutD, MemOut;
-    reg [7:0] OutMuxA, OutMuxB, OutMuxC;
-    wire [3:0]  OutFlag, OutFlagReg;
+    wire [15:0] IROut;
+    wire [7:0]  ALUOut, AOut, BOut, COut, Address, MemoryOut;
+    reg [7:0] MuxAOut, MuxBOut, MuxCOut;
+    wire [3:0]  ALUOutFlag, OutFlagReg;
     
-    Memory _Memory(.address(OutD),
-                   .data(OutALU),
+    Memory _Memory(.address(Address),
+                   .data(ALUOut),
                    .wr(Mem_WR),
                    .cs(Mem_CS),
                    .clock(Clock),
-                   .o(MemOut)
+                   .o(MemoryOut)
                     );
     
     alu_module _alu_module(.FunSel(ALU_FunSel),
-                           .A(OutMuxC),
-                           .B(OutB),
+                           .A(MuxCOut),
+                           .B(BOut),
                            .Cin(OutFlagReg[2]),
-                           .OutALU(OutALU),
-                           .OutFLAG(OutFlag)
+                           .OutALU(ALUOut),
+                           .OutFLAG(ALUOutFlag)
     );
     
     reg_module _reg_module(.Clock(Clock),
-                           .I(OutMuxA),
+                           .I(MuxAOut),
                            .FunSel(RF_FunSel),
                            .RegSel(RF_RegSel),
                            .OutASel(RF_OutASel),
                            .OutBSel(RF_OutBSel),
-                           .OutA(OutA),
-                           .OutB(OutB)
+                           .OutA(AOut),
+                           .OutB(BOut)
                             );
     
     arf_module _arf_module(.Clock(Clock),
-                           .I(OutMuxB),
+                           .I(MuxBOut),
                            .FunSel(ARF_FunSel),
                            .RegSel(ARF_RegSel),
-                           .OutCSel(ARF_OutCSel),
+                           .OutCSel(ARF_COut),
                            .OutDSel(ARF_OutDSel),
-                           .OutC(OutC),
-                           .OutD(OutD)
+                           .OutC(COut),
+                           .OutD(Address)
                             );
     
     reg_ir _reg_ir(.Clock(Clock),
                    .Enable(IR_Enable),
                    .FunSel(IR_Funsel),
                    .lh(IR_LH),
-                   .I(MemOut),
-                   .IRout(IRout));
+                   .I(MemoryOut),
+                   .IRout(IROut));
                    
     reg_flag _reg_flag(.Clock(Clock),
-                       .InFLAG(OutFlag),
+                       .InFLAG(ALUOutFlag),
                        .OutFLAG(OutFlagReg));
                        
     always @(*)
         begin
             case(MuxASel)
-            2'b00: OutMuxA <= IRout[7:0];
-            2'b01: OutMuxA <= MemOut;
-            2'b10: OutMuxA <= OutC;
-            2'b11: OutMuxA <= OutALU;
+            2'b00: MuxAOut <= IROut[7:0];
+            2'b01: MuxAOut <= MemoryOut;
+            2'b10: MuxAOut <= COut;
+            2'b11: MuxAOut <= ALUOut;
             endcase
         end
     
     always @(*)
         begin
             case(MuxBSel)
-            2'b01: OutMuxB <= IRout[7:0];
-            2'b10: OutMuxB <= MemOut;
-            2'b11: OutMuxB <= OutALU;
+            2'b01: MuxBOut <= IROut[7:0];
+            2'b10: MuxBOut <= MemoryOut;
+            2'b11: MuxBOut <= ALUOut;
             endcase
         end
             
     always @(*)
         begin
             if(MuxCSel)
-                OutMuxC <= OutA;
+                MuxCOut <= AOut;
             else
-                OutMuxC <= OutC;
+                MuxCOut <= COut;
         end
         
 endmodule

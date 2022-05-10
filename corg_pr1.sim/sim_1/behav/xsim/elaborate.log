@@ -3,10 +3,5 @@ Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
 Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 93b272958a1c40c6b9cb4f13c8c61961 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Project1Test_behav xil_defaultlib.Project1Test xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
-ERROR: [VRFC 10-93] AOut is not declared under prefix _ALUSystem [C:/Users/ceza4/corg_pr1/corg_pr1.srcs/sim_1/imports/CorgProject1/TestBench.v:109]
-ERROR: [VRFC 10-93] ALUOut is not declared under prefix _ALUSystem [C:/Users/ceza4/corg_pr1/corg_pr1.srcs/sim_1/imports/CorgProject1/TestBench.v:110]
-ERROR: [VRFC 10-93] ARF_COut is not declared under prefix _ALUSystem [C:/Users/ceza4/corg_pr1/corg_pr1.srcs/sim_1/imports/CorgProject1/TestBench.v:111]
-ERROR: [VRFC 10-93] MemoryOut is not declared under prefix _ALUSystem [C:/Users/ceza4/corg_pr1/corg_pr1.srcs/sim_1/imports/CorgProject1/TestBench.v:112]
-ERROR: [VRFC 10-93] IROut is not declared under prefix _ALUSystem [C:/Users/ceza4/corg_pr1/corg_pr1.srcs/sim_1/imports/CorgProject1/TestBench.v:113]
-ERROR: [VRFC 10-93] MuxAOut is not declared under prefix _ALUSystem [C:/Users/ceza4/corg_pr1/corg_pr1.srcs/sim_1/imports/CorgProject1/TestBench.v:114]
-ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
