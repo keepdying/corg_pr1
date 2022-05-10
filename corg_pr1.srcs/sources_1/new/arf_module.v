@@ -20,13 +20,15 @@ module arf_module(
     always @(*)
         begin
             case(OutCSel)
-            2'b0?: OutC <= PC;
+            2'b00: OutC <= PC;
+            2'b01: OutC <= PC;
             2'b10: OutC <= AR;
             2'b11: OutC <= SP;
             endcase
             
             case(OutDSel)
-            2'b0?: OutD <= PC;
+            2'b00: OutD <= PC;
+            2'b01: OutD <= PC;
             2'b10: OutD <= AR;
             2'b11: OutD <= SP;
             endcase
