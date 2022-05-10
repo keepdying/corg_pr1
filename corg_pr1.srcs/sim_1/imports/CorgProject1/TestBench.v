@@ -34,12 +34,12 @@ module Project1Test();
     reg[2:0] ARF_RegSel;
     reg      IR_LH;
     reg      IR_Enable;
-    reg[1:0]      IR_Funsel;
+    reg[1:0] IR_Funsel;
     reg      Mem_WR;
     reg      Mem_CS;
     reg[1:0] MuxASel;
     reg[1:0] MuxBSel;
-    reg MuxCSel;
+    reg      MuxCSel;
     reg      Clock;
     
     //Test Bench Connection of ALU System
@@ -49,7 +49,7 @@ module Project1Test();
     .RF_FunSel(RF_FunSel),
     .RF_RegSel(RF_RegSel),
     .ALU_FunSel(ALU_FunSel),
-    .ARF_COut(ARF_OutCSel), 
+    .ARF_OutCSel(ARF_OutCSel), 
     .ARF_OutDSel(ARF_OutDSel), 
     .ARF_FunSel(ARF_FunSel),
     .ARF_RegSel(ARF_RegSel),

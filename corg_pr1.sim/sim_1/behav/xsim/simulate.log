@@ -1,0 +1,52 @@
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+Input Values:
+Operation: 1
+Register File: OutASel: 2, OutBSel: 3, FunSel: 3, Regsel:  0
+ALU FunSel:  3
+Addres Register File: OutCSel: 3, OutDSel: 1, FunSel: 3, Regsel: 0
+Instruction Register: LH: 1, Enable: 1, FunSel: 3
+Memory: WR: 1, CS: 1
+MuxASel: 2, MuxBSel: 1, MuxCSel: 1
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  X, ALUOutFlags: Z:x, C:0, N:x, O:0,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   z
+Instruction Register: IROut:     x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: 0
+Register File: OutASel: 1, OutBSel: 2, FunSel: 1, Regsel:  2
+ALU FunSel:  5
+Addres Register File: OutCSel: 2, OutDSel: 2, FunSel: 0, Regsel: 2
+Instruction Register: LH: 0, Enable: 0, FunSel: 1
+Memory: WR: 0, CS: 0
+MuxASel: 1, MuxBSel: 0, MuxCSel: 0
+
+Ouput Values:
+Register File: AOut:   0, BOut:   0
+ALUOut:   0, ALUOutFlag:  8, ALUOutFlags: Z:1, C:0, N:0, O:0,
+Address Register File: COut:   0, DOut (Address):   0
+Memory Out:   0
+Instruction Register: IROut:     0
+MuxAOut:   0, MuxBOut:   0, MuxCOut:   0
+Input Values:
+Operation: 0
+Register File: OutASel: 1, OutBSel: 2, FunSel: 1, Regsel:  2
+ALU FunSel:  5
+Addres Register File: OutCSel: 2, OutDSel: 2, FunSel: 1, Regsel: 2
+Instruction Register: LH: 0, Enable: 0, FunSel: 1
+Memory: WR: 0, CS: 0
+MuxASel: 1, MuxBSel: 0, MuxCSel: 0
+
+Ouput Values:
+Register File: AOut:   1, BOut:   0
+ALUOut:   0, ALUOutFlag:  8, ALUOutFlags: Z:1, C:0, N:0, O:0,
+Address Register File: COut:   0, DOut (Address):   0
+Memory Out:   0
+Instruction Register: IROut:     0
+MuxAOut:   0, MuxBOut:   0, MuxCOut:   0
+         3 tests completed.
+$finish called at time : 25 ns : File "C:/Users/ceza4/corg_pr1/corg_pr1.srcs/sim_1/imports/CorgProject1/TestBench.v" Line 122

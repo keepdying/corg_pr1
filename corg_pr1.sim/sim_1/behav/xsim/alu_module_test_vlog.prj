@@ -16,6 +16,7 @@ verilog xil_defaultlib  \
 "../../../../corg_pr1.srcs/sim_1/imports/Desktop/register_8bit_test.v" \
 "../../../../corg_pr1.srcs/sim_1/new/reg_ir_test.v" \
 "../../../../corg_pr1.srcs/sim_1/new/alu_module_test.v" \
+"../../../../corg_pr1.srcs/sim_1/new/arf_module_test.v" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"

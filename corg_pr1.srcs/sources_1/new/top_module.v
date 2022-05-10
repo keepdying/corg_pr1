@@ -6,7 +6,7 @@ module ALUSystem(
     input wire[1:0] RF_FunSel,
     input wire[3:0] RF_RegSel,
     input wire[3:0] ALU_FunSel,
-    input wire[1:0] ARF_COut, //ARF_OutCSel 
+    input wire[1:0] ARF_OutCSel,
     input wire[1:0] ARF_OutDSel, 
     input wire[1:0] ARF_FunSel,
     input wire[2:0] ARF_RegSel,
@@ -22,7 +22,7 @@ module ALUSystem(
     );
     
     wire [15:0] IROut;
-    wire [7:0]  ALUOut, AOut, BOut, COut, Address, MemoryOut;
+    wire [7:0]  ALUOut, AOut, BOut, ARF_COut, Address, MemoryOut;
     reg [7:0] MuxAOut, MuxBOut, MuxCOut;
     wire [3:0]  ALUOutFlag, OutFlagReg;
     
@@ -56,9 +56,9 @@ module ALUSystem(
                            .I(MuxBOut),
                            .FunSel(ARF_FunSel),
                            .RegSel(ARF_RegSel),
-                           .OutCSel(ARF_COut),
+                           .OutCSel(ARF_OutCSel),
                            .OutDSel(ARF_OutDSel),
-                           .OutC(COut),
+                           .OutC(ARF_COut),
                            .OutD(Address)
                             );
     
@@ -78,7 +78,7 @@ module ALUSystem(
             case(MuxASel)
             2'b00: MuxAOut <= IROut[7:0];
             2'b01: MuxAOut <= MemoryOut;
-            2'b10: MuxAOut <= COut;
+            2'b10: MuxAOut <= ARF_COut;
             2'b11: MuxAOut <= ALUOut;
             endcase
         end
@@ -97,7 +97,7 @@ module ALUSystem(
             if(MuxCSel)
                 MuxCOut <= AOut;
             else
-                MuxCOut <= COut;
+                MuxCOut <= ARF_COut;
         end
         
 endmodule
