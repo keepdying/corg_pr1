@@ -2,22 +2,11 @@
 # Webtalk v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-<<<<<<< HEAD
-# Start of session at: Tue May 10 19:26:32 2022
-# Process ID: 47964
-# Current directory: C:/Users/ceza4/corg_pr1/corg_pr1.sim/sim_1/behav/xsim
-# Command line: wbtcv.exe -mode batch -source C:/Users/ceza4/corg_pr1/corg_pr1.sim/sim_1/behav/xsim/xsim.dir/alu_module_test_behav/webtalk/xsim_webtalk.tcl -notrace
-# Log file: C:/Users/ceza4/corg_pr1/corg_pr1.sim/sim_1/behav/xsim/webtalk.log
-# Journal file: C:/Users/ceza4/corg_pr1/corg_pr1.sim/sim_1/behav/xsim\webtalk.jou
-#-----------------------------------------------------------
-source C:/Users/ceza4/corg_pr1/corg_pr1.sim/sim_1/behav/xsim/xsim.dir/alu_module_test_behav/webtalk/xsim_webtalk.tcl -notrace
-=======
-# Start of session at: Tue May 10 18:49:07 2022
-# Process ID: 13740
+# Start of session at: Tue May 10 18:48:47 2022
+# Process ID: 7188
 # Current directory: C:/Users/Fatih/verilog/corg_pr1/corg_pr1.sim/sim_1/behav/xsim
 # Command line: wbtcv.exe -mode batch -source C:/Users/Fatih/verilog/corg_pr1/corg_pr1.sim/sim_1/behav/xsim/xsim.dir/reg_arf_test_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: C:/Users/Fatih/verilog/corg_pr1/corg_pr1.sim/sim_1/behav/xsim/webtalk.log
 # Journal file: C:/Users/Fatih/verilog/corg_pr1/corg_pr1.sim/sim_1/behav/xsim\webtalk.jou
 #-----------------------------------------------------------
 source C:/Users/Fatih/verilog/corg_pr1/corg_pr1.sim/sim_1/behav/xsim/xsim.dir/reg_arf_test_behav/webtalk/xsim_webtalk.tcl -notrace
->>>>>>> 602429d015b32bca45360917a2fc737ae11a26b8

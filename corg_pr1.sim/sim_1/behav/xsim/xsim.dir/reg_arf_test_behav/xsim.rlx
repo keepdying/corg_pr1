@@ -1,6 +1,10 @@
 
 { 
+<<<<<<< HEAD
     crc :  320550103159400373  , 
+=======
+    crc :  3058639597838187593  , 
+>>>>>>> 602429d015b32bca45360917a2fc737ae11a26b8
     ccp_crc :  0  , 
     cmdline : " -wto 93b272958a1c40c6b9cb4f13c8c61961 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot reg_arf_test_behav xil_defaultlib.reg_arf_test xil_defaultlib.glbl" , 
     buildDate : "Dec 15 2017" , 
