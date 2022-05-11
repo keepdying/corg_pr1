@@ -1,4 +1,3 @@
-`timescale 1ns / 1ps
 
 module ALUSystem(
     input wire[1:0] RF_OutASel,
@@ -34,7 +33,7 @@ module ALUSystem(
                    .o(MemoryOut)
                     );
     
-    alu_module _alu_module(.FunSel(ALU_FunSel),
+    alu_module_v2 _alu_module(.FunSel(ALU_FunSel),
                            .A(MuxCOut),
                            .B(BOut),
                            .Cin(OutFlagReg[2]),

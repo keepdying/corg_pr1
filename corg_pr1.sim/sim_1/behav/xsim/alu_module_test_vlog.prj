@@ -10,6 +10,7 @@ verilog xil_defaultlib  \
 "../../../../corg_pr1.srcs/sources_1/new/shift_module.v" \
 "../../../../corg_pr1.srcs/sources_1/new/reg_flag.v" \
 "../../../../corg_pr1.srcs/sources_1/new/top_module.v" \
+"../../../../corg_pr1.srcs/sources_1/new/alu_module_v2.v" \
 "../../../../corg_pr1.srcs/sim_1/imports/CorgProject1/TestBench.v" \
 "../../../../corg_pr1.srcs/sim_1/imports/Desktop/register_16bit_test.v" \
 "../../../../corg_pr1.srcs/sim_1/imports/Desktop/reg_module_test.v" \

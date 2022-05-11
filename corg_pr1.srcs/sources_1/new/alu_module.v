@@ -9,8 +9,8 @@ module alu_module(
     
     wire [7:0] shift_temp;
     wire [8:0] sum, sub;
-    wire shift_carry, sum_carry;
-    reg neg, zero, carry, overflow;
+    wire neg, zero, carry, overflow, shift_carry, sum_carry;
+
     
     shift_module shifter(.I(A), .FunSel(FunSel), .Cin(Cin), .Q(shift_temp), .Cout(shift_carry));
         
@@ -22,29 +22,23 @@ module alu_module(
     always @(*)
         begin
             case(FunSel)
-            4'b0000: begin OutALU = A; zero = (OutALU == 8'b0); neg = OutALU[7];  end // A
-            4'b0001: begin OutALU = B; zero = (OutALU == 8'b0); neg = OutALU[7]; end // B
-            4'b0010: begin OutALU = ~A; zero = (OutALU == 8'b0); neg = OutALU[7]; end // NOT A
-            4'b0011: begin OutALU = ~B; zero = (OutALU == 8'b0); neg = OutALU[7]; end // NOT B
-            4'b0100: begin OutALU = sum[7:0]; zero = (OutALU == 8'b0); neg = OutALU[7]; carry = sum[8]; overflow = sum[7]; end // A + B
-            4'b0101: begin OutALU = sum[7:0]; zero = (OutALU == 8'b0); neg = OutALU[7]; carry = sum[8]; overflow = sum[7]; end // A + B + Cin
-            4'b0110: begin OutALU = sub[7:0]; zero = (OutALU == 8'b0); neg = OutALU[7]; carry = sub[8]; overflow = sub[7]; end // A - B
-            4'b0111: begin OutALU = A & B; zero = (OutALU == 8'b0); neg = OutALU[7]; end // A AND B
-            4'b1000: begin OutALU = A | B; zero = (OutALU == 8'b0); neg = OutALU[7]; end // A OR B
-            4'b1001: begin OutALU = A ^ B; zero = (OutALU == 8'b0); neg = OutALU[7]; end // A XOR B
-            4'b1010: begin OutALU = shift_temp; zero = (OutALU == 8'b0); neg = OutALU[7]; carry = shift_carry;  end
-            4'b1011: begin OutALU = shift_temp; zero = (OutALU == 8'b0); neg = OutALU[7]; carry = shift_carry;  end
-            4'b1100: begin OutALU = shift_temp; zero = (OutALU == 8'b0); neg = OutALU[7]; overflow = (A[7] ^ A[6]); end // ASL A
-            4'b1101: begin OutALU = shift_temp; zero = (OutALU == 8'b0); end // ASR A
-            4'b1110: begin OutALU = shift_temp; zero = (OutALU == 8'b0); neg = OutALU[7]; overflow = (A[7] ^ A[6]); carry = shift_carry; end
-            4'b1111: begin OutALU = shift_temp; zero = (OutALU == 8'b0); neg = OutALU[7]; overflow = (A[7] ^ Cin); carry = shift_carry;  end
-
+            4'b0000: OutALU = A; 
+            4'b0001: OutALU = B;
+            4'b0010: OutALU = ~A;
+            4'b0011: OutALU = ~B;
+            4'b0100: OutALU = sum[7:0]; // A + B
+            4'b0101: OutALU = sum[7:0]; // A + B + Cin
+            4'b0110: OutALU = sub[7:0]; // A - B
+            4'b0111: OutALU = A & B; // bitwise and
+            4'b1000: OutALU = A | B; // bitwise or
+            4'b1001: OutALU = A ^ B; // bitwise xor
+            default: OutALU = shift_temp;
             endcase
         end
      
-    // assign zero     = (OutALU == 8'b0);
-    // assign carry    = ((FunSel == 4'b0100) & sum[8]) | ((FunSel == 4'b0101) & sum[8])  | ((FunSel == 4'b0110) && sub[8]) | ((FunSel == 4'b1010) & shift_carry) | ((FunSel == 4'b1010) && shift_carry) | ((FunSel == 4'b1110) & shift_carry) | ((FunSel == 4'b1111) & shift_carry);
-    // assign neg      = (FunSel == 4'b1101) ? neg : OutALU[7];
-    // assign overflow = ((FunSel == 4'b1100) & (A[7] ^ A[6])) | ((FunSel == 4'b1110) & (A[7] ^ A[6])) | ((FunSel == 4'b1111) & (A[7] ^ Cin)) | ((FunSel == 4'b0100) & sum[7]) | ((FunSel == 4'b0101) & sum[7]) | ((FunSel == 4'b0110) & sub[7]);
+    assign zero     = (OutALU == 8'b0);
+    assign carry    = ((FunSel == 4'b0100) & sum[8]) | ((FunSel == 4'b0101) & sum[8])  | ((FunSel == 4'b0110) && sub[8]) | ((FunSel == 4'b1010) & shift_carry) | ((FunSel == 4'b1010) && shift_carry) | ((FunSel == 4'b1110) & shift_carry) | ((FunSel == 4'b1111) & shift_carry);
+    assign neg      = (FunSel == 4'b1101) ? neg : OutALU[7];
+    assign overflow = ((FunSel == 4'b1100) & (A[7] ^ A[6])) | ((FunSel == 4'b1110) & (A[7] ^ A[6])) | ((FunSel == 4'b1100) & (A[7] ^ A[6])) | ((FunSel == 4'b1111) & (A[7] ^ Cin)) | ((FunSel == 4'b0100) & sum[7]) | ((FunSel == 4'b0101) & sum[7]) | ((FunSel == 4'b0110) & sub[7]);
 
 endmodule

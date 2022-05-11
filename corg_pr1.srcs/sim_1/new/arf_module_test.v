@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module reg_arf_test();
+module arf_module_test();
     reg Clock;
     reg [7:0] I;
     reg [1:0] FunSel;
