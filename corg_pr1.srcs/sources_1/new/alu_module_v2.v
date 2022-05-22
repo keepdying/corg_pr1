@@ -7,13 +7,11 @@ module alu_module_v2(
     output wire [3:0] OutFLAG
     );
     
-    wire [7:0] shift_temp;
     wire [8:0] sum_temp, sub_temp;
     wire sum_carry;
     reg neg, zero, carry, overflow;
     
-//    shift_module shifter(.I(A), .FunSel(FunSel), .Cin(Cin), .Q(shift_temp), .Cout(shift_carry));
-        
+   
     assign OutFLAG = {zero, carry, neg, overflow};
     assign sum_carry = (FunSel == 4'b0101) ? Cin : 0;
     assign sum_temp = {1'b0,A} + {1'b0,B} + {8'b0, sum_carry};
@@ -79,7 +77,7 @@ module alu_module_v2(
             
             4'b0111: begin 
                 OutALU = A & B; 
-                
+                 
                 zero = (OutALU == 8'b0); 
                 neg = OutALU[7]; 
             end // A AND B
@@ -133,7 +131,7 @@ module alu_module_v2(
                 OutALU = {A[6:0], Cin}; 
                 
                 zero = (OutALU == 8'b0);
-                carry = A[7:0]; 
+                carry = A[7];
                 neg = OutALU[7]; 
                 overflow = (A[7] ^ A[6]); 
                 
